@@ -9,7 +9,7 @@ The main part of this method is the usage of the `SHA256` algorithm and the loca
 
 What the server has to do to create an account is the following:
 
-1. It has to create a **unique** string, which gets **salted** and **hashed**. The result of that is the `key`. You could imagine it as something like a username. It is very important that the string you start of is unique. Otherwise somebody get's access to another account. Another very important thing is to have a **secret salt**.
+1. It has to create a **unique** string, which gets **salted** and **hashed**. The result of that is the `key`. You could imagine it as something like a username. It is very important that the string you start with is unique. Otherwise somebody gets access to another account. Another very important thing is to have a **secret salt**.
 
 2. In order to prevent somebody from just bruteforceing the key my method requires another parameter, which I call the `authToken`. As you can imagine it is like a password. The way it is created is close to the creation of the `key`. Take the `key`, you've just created in the first step, **salt** it (**Recommended: Use two different salts**) and voila you've created the `key` and `authToken`.
 
